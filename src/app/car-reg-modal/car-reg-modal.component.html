@@ -1,0 +1,41 @@
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap" rel="stylesheet">
+  </head>
+
+<div class="container-fluid">
+  <form [formGroup] = "carRegForm" (ngSubmit)="carReg()" >  
+     <!-- (ngSubmit)="ureg()" -->
+<div class="carRegForm">
+ <div class="modal-header">
+    <h4 class="modal-title">Car Registration</h4>
+  </div>
+  <div class="modal-body">
+    <div class="form-floating mb-3 mt-3 carNumberInp">
+        <input  type="text" ng-model="myInput" class="form-control" id="carNumber" placeholder="Car Number" name="carNumber" formControlName="carNumber" required>
+        <label for="carNumber">Car Number</label>
+        <div *ngIf="carRegForm.controls['carNumber'].invalid && (submitted || carRegForm.controls['carNumber'].touched)  " class="alert" >
+            Please enter car number
+        </div>
+      </div>
+      <div class="form-floating mb-3 mt-3 techPassInp">
+        <input  type="text" ng-model="myInput" class="form-control" id="techPass" placeholder="Tech Passport Id" name="techPass" formControlName="techPass" required>
+        <label for="techPass">Tech Passport Id</label>
+        <div *ngIf="carRegForm.controls['techPass'].invalid && (submitted || carRegForm.controls['techPass'].touched)  " class="alert" >
+            Please enter tech passport Id
+        </div>
+      </div>
+       <div class="selectCompany">
+        <select name="company" id="company" class="form-control" formControlName="company" required>
+          <option value="" disabled selected>Select a Company</option>
+          <option *ngFor="let company of companies" [value]="company.companyName">{{company.companyName}}</option>
+        </select>
+        <div class="alert"  *ngIf="carRegForm.controls['company'].invalid &&  (submitted || carRegForm.controls['company'].touched) " >Please select a company</div>
+      </div> 
+      <button type="submit" class="btn btn-success regbtn">Registrate</button>
+  </div>    
+</div>
+
+ </form>    
+</div>

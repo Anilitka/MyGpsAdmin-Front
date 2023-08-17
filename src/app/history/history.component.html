@@ -1,0 +1,90 @@
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<app-nav-bar></app-nav-bar>
+
+<div class="maincontainer">
+  <div class="tablediv">
+    <div class="history-content">
+  <div class="search-container">
+    <div class="form-inline mt-2 formControlDiv">
+      <input [(ngModel)]="filterTxt" class="form-control mr-2" #search style="width: 300px" placeholder="Search" type="text">
+      <div class="datePicker">
+        <label class="dateLabel firstlabel">Choose date from:</label>
+        <input type="text" class="form-control" placeholder="MM/DD/YY" bsDatepicker [(bsValue)]="startDate">
+        <label class="dateLabel">to:</label>
+        <input type="text" class="form-control" placeholder="MM/DD/YY" bsDatepicker [(bsValue)]="endDate">
+
+        <button  class="btn btn-success" (click)=" fillCarsInfoByDate();">Filter</button>
+
+      </div>
+    </div>
+  </div>
+  <div class="table-container">
+    <table class="table">
+      <thead>
+      <tr class="headtr">
+        <th >Card Number</th>
+        <th >Car Number</th>
+        <th class="literth">Liters</th>
+        <th >Fill Date/Time</th>
+      </tr>
+      </thead>
+      <tbody>
+      <ng-container *ngFor="let data of carsData | search: filterTxt" >
+        <tr (click)=" returnCardID(data.cardID); getCountById(); fillCarsInfoById();" style="cursor: pointer;">
+          <td>{{ data.cardID }}</td>
+          <td>{{ data.carNumber }}</td>
+
+          <td>sum: {{data.liters}} </td>
+
+          <td></td>
+        </tr>
+        <tr *ngIf="data.expanded">
+          <td></td>
+          <td></td>
+          <td colspan="2">
+            <table>
+              <tbody>
+              <tr *ngFor="let item of carsDataById">
+                <td class="liters-column">{{ item.liters }}</td>
+                <td class="fill-datetime-column">{{ item.timeInserted | date:'yyyy-MM-dd ' }}<strong>{{ item.timeInserted | date:'HH:mm' }}</strong></td>
+
+              </tr>
+
+              <tr>
+                <td align="right">
+                  <div class="pagination" style="margin-top: 15px;">
+                  <div class ="page_info float-right">
+                  <button class="btn btn-primary leftBtn"  (click)="previousPage()"><i class="fa-solid fa-chevron-left"></i></button>
+                  <button class="btn btn-primary rightBtn" (click)="nextPage()" ><i class="fa-solid fa-chevron-right"></i></button>
+                </div>
+              </div>
+                </td>
+              </tr>
+
+
+              </tbody>
+            </table>
+          </td>
+        </tr>
+        
+      </ng-container>
+      </tbody>
+      
+    </table>
+  </div>
+  </div>
+</div>
+  <div class="pagdiv">
+     <div class="pagination2" style="margin-top: 15px;">
+    <div class ="page_info">
+    <button class="btn btn-primary leftBtn"  (click)="previousMainPage()"><i class="fa-solid fa-chevron-left"></i></button>
+    <button class="btn btn-primary rightBtn" (click)="nextMainPage()" ><i class="fa-solid fa-chevron-right"></i></button>
+  </div>
+</div> 
+  </div>
+</div>
+
+
+

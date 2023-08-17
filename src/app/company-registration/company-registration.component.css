@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container-fluid{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+form{
+    width: 400px;
+    border: 1px solid white;
+    background-color: white;
+    border-radius: 7px;
+    padding: 50px;
+    text-align: center;
+}
+.regbtn{
+    text-align: center;
+    padding: 10px 115px;
+    background-color: rgb(38, 122, 38);
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: bold;
+    margin-top: 15px;
+}
+.modal-header{
+   display: flex;
+   justify-content: center;
+    margin-bottom: 15px;
+}
+.modal-title{
+    font-family: 'Roboto Condensed', sans-serif;
+    margin-bottom: 15px;
+}
+.modal-body{
+    padding-top: 5px;
+}
+.alert{
+    text-align: start;
+    margin: 0;
+    padding: 0;
+    color: rgb(205, 7, 7);
+    font-weight: bold;
+}

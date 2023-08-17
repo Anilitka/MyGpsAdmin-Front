@@ -1,0 +1,57 @@
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap" rel="stylesheet">
+</head>
+
+
+<div class="container-fluid">
+<form [formGroup] ="regForm" (ngSubmit)="register()" >
+   <div class="regform">
+    <h1>Registration Form</h1>
+       <div class="form-floating mb-3 mt-3 emailinp">
+        <input  type="text" ng-model="myInput" class="form-control" id="email" placeholder="Enter email" name="email" formControlName="email" required>
+        <label for="email">Login</label>
+        <div *ngIf="regForm.controls['email'].invalid && (submitted || regForm.controls['email'].touched)  " class="alert" >
+            Please enter the login
+        </div>
+      </div>
+
+      <div class="form-floating mt-3 mb-3 passwordinp ">
+        <input type="password" ng-model="myInput" class="form-control" id="pwd" placeholder="Enter password" name="pswd" formControlName="passwrd" required>
+        <label for="pwd">Password</label>
+        <div *ngIf="regForm.controls['passwrd'].invalid &&  (submitted || regForm.controls['passwrd'].touched) " class="alert">
+            Please enter the password
+        </div>
+      </div>
+
+     <div class="form-floating mt-3 mb-3 passwordinp ">
+       <input type="password" ng-model="myInput" class="form-control" id="cpwd" placeholder="Enter password" name="pswd" formControlName="confPassword" required>
+       <label for="cpwd">Confirm Password</label>
+       <div *ngIf="regForm.controls['confPassword'].invalid &&  (submitted || regForm.controls['confPassword'].touched) " class="alert">
+         Please enter the password confirmation
+       </div>
+     </div>
+       <div class="rolediv">
+
+      <select formControlName="role" [(ngModel)]="regForm.value.role" ng-model="myInput" class="form-control roleformcontrol"  (change)="changeRole($event)" required >
+        <option value="" disabled selected>Select the role:</option>
+      <option *ngFor="let role of rolesList" [value]="role.role">{{role.role}}</option>
+      </select>
+       <div *ngIf="regForm.controls['role'].invalid &&  (submitted || regForm.controls['role'].touched) " class="alert">
+          Please choose your role
+      </div>
+       </div>
+
+
+       <button type="submit" id="liveToastBtn" class="btn btn-success regbtn" >Registrate</button>
+
+
+    </div>
+
+</form>
+</div>
+
+
+
+

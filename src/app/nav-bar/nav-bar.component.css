@@ -1,0 +1,107 @@
+.sidebar {
+  width: 280px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #343a40;
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+}
+.logo{
+  font-weight: bold;
+  font-family: 'Oswald', sans-serif;
+}
+.sidebar-brand {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  color: #fff;
+  text-decoration: none;
+  justify-content: center;
+}
+.regitem a{
+  display: flex;
+  justify-content: center;
+  padding: 8px 12px ;
+  background-color: #007bff;
+}
+.sidebar hr {
+  border-color: #fff;
+  margin-top: 2px;
+  margin-bottom: 10px;
+}
+.dropdown-menu{
+  background-color: #343a40;
+  border: none;
+}
+.sidebar ul {
+  width: 95%;
+  list-style: none;
+  padding-left: 0;
+  margin-top: 15px;
+  margin-bottom: auto;
+}
+
+.sidebar li {
+  margin-bottom: 10px;
+
+}
+
+.sidebar .dropdown-toggle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: #fff;
+}
+.dropdown a{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.sidebar .dropdown-toggle img {
+  margin-right: 10px;
+}
+
+.dropdown-menu-dark {
+  background-color: #343a40;
+  color: #fff;
+}
+
+
+
+.sidebar .nav-link {
+  display: flex;
+  align-items: center;
+}
+
+.sidebar .nav-link svg {
+  margin-right: 8px;
+}
+
+.sidebar .dropdown-toggle {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #fff;
+}
+
+.sidebar .dropdown-toggle img {
+  margin-right: 10px;
+}
+
+.historybtn{
+  background-color: #007bff;
+  display: flex;
+  justify-content: center;
+}
+
+.dropdown-menu li{
+margin-left: 12px;
+cursor: pointer;
+}

@@ -1,0 +1,42 @@
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap" rel="stylesheet">
+</head>
+
+
+<div class="container-fluid">
+  <form [formGroup] = "loginForm" >
+    <div class="row">
+      <div class="col-6 imgcol"><img src="assets/imgs/man.png" alt=""></div>
+      <div class="col-6 contentcol">
+        <div class="logForm">
+          <h1>Login Form</h1>
+          <div class="form-floating mb-3 mt-3 emailinp">
+            <input  type="text" ng-model="myInput" class="form-control" id="email" placeholder="Enter email" name="email" formControlName="email" required>
+            <label for="email">Login</label>
+            <div *ngIf="loginForm.controls['email'].invalid &&  ( submitted || loginForm.controls['email'].touched )" class="alert" >
+              Please enter the login
+            </div>
+
+          </div>
+
+          <div class="form-floating mt-3 mb-3 passwordinp ">
+            <input type="password" ng-model="myInput" class="form-control" id="pwd" placeholder="Enter password" name="pswd" formControlName="passwrd" required>
+            <label for="pwd">Password</label>
+            <div *ngIf="loginForm.controls['passwrd'].invalid && (submitted || loginForm.controls['passwrd'].touched) " class="alert">
+              Please enter the password
+            </div>
+
+
+          </div>
+          <button type="submit" class="btn btn-success subbtn"(click)="logIn()">Login</button>
+
+          <p>Don't have an account? <a (click)="goToregistration()">Sing up</a></p>
+
+        </div>
+      </div>
+    </div>
+  </form>
+
+</div>

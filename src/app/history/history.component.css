@@ -1,0 +1,83 @@
+.formControlDiv{
+  display: flex;
+  justify-content: space-between;
+}
+
+.datePicker{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-right: 50px;
+  height: 40px;
+}
+.dateLabel{
+  white-space: nowrap;
+  padding: 5px;
+}
+.leftBtn{
+  margin-right: 5px;
+}
+@media (max-width:1509){
+  .leftBtn{
+    margin-right: 0px;
+  }
+}
+
+.page_info{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.history-content {
+  margin-top: 30px;
+  /* margin-left: 250px; */
+   /* Adjust the margin value as needed */
+}
+
+.search-container {
+  margin-bottom: 20px; /* Adjust the margin value as needed */
+}
+
+.tabset-container {
+  margin-top: 20px; /* Adjust the margin value as needed */
+}
+
+.liters-column {
+  padding-right: 20px;
+}
+
+.fill-datetime-column {
+  padding-left: 280px;
+}
+.headtr th{
+  width: 30%;
+}
+.literth{
+  width: 20% !important;
+}
+
+td[colspan="2"] {
+  overflow: hidden;
+}
+
+td[colspan="2"] table {
+  width: 100%;
+  transition: height 300ms ease-in-out, opacity 300ms ease-in-out;
+}
+
+td[colspan="2"] table tr {
+  transition: all 300ms ease-in-out;
+}
+
+.maincontainer{
+  margin-left: 300px;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+height: 100vh;
+}
+.pagdiv{
+  margin-left: 0;
+  margin-bottom: 10px;
+}

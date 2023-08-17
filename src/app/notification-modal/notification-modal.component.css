@@ -1,0 +1,16 @@
+.user-control {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  background-color: #f5f5f5; /* Change the background color as desired */
+  padding: 10px;
+}
+
+.user-info {
+  flex: 1;
+}
+
+.user-actions {
+  display: flex;
+  gap: 10px;
+}

@@ -1,0 +1,73 @@
+﻿[
+  {
+    "cardNumber": "1234",
+    "carNumber": "ABC123",
+    "data": [
+      {
+        "liters": 50,
+        "fillDateTime": "2023-07-10 10:00:00"
+      },
+      {
+        "liters": 30,
+        "fillDateTime": "2023-07-11 09:30:00"
+      },
+      {
+        "liters": 60,
+        "fillDateTime": "2023-07-12 12:15:00"
+      }
+    ]
+  },
+  {
+    "cardNumber": "5678",
+    "carNumber": "DEF456",
+    "data": [
+      {
+        "liters": 40,
+        "fillDateTime": "2023-07-10 11:30:00"
+      },
+      {
+        "liters": 20,
+        "fillDateTime": "2023-07-11 08:45:00"
+      },
+      {
+        "liters": 35,
+        "fillDateTime": "2023-07-12 14:30:00"
+      }
+    ]
+  },
+  {
+    "cardNumber": "9112",
+    "carNumber": "GHI789",
+    "data": [
+      {
+        "liters": 50,
+        "fillDateTime": "2023-07-10 10:00:00"
+      },
+      {
+        "liters": 10,
+        "fillDateTime": "2023-07-11 09:30:00"
+      },
+      {
+        "liters": 40,
+        "fillDateTime": "2023-07-12 12:15:00"
+      }
+    ]
+  },  {
+    "cardNumber": "3415",
+    "carNumber": "LMN156",
+    "data": [
+      {
+        "liters": 50,
+        "fillDateTime": "2023-07-10 10:00:00"
+      },
+      {
+        "liters": 50,
+        "fillDateTime": "2023-07-11 09:30:00"
+      },
+      {
+        "liters": 25,
+        "fillDateTime": "2023-07-12 12:15:00"
+      }
+    ]
+  }
+]

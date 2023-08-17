@@ -1,0 +1,29 @@
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+
+<div class="container-fluid">
+    <div class="content">
+        <div class="header">
+            <h4 class="modal-title">Delete Company</h4>
+        </div>
+        <div class="companyContent">
+            <ul *ngFor="let company of allCompanies">
+                <li>
+                    <div class="companyName">
+                   <p><b> {{company.companyName}} </b></p> 
+                    </div>
+                    <div class="deleteCompany" (click)=" returnCompanyId(company.companyId); deleteCompanyById(company.CompanyId); deleteByCompanyVisualId()" > 
+                    <i class="fa-solid fa-trash-can" style="color: rgb(194, 10, 10); cursor: pointer;"></i>    
+                     </div> 
+                    
+                </li>
+                <hr>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+  

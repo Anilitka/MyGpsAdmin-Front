@@ -1,0 +1,25 @@
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap" rel="stylesheet">
+</head>
+   <div class="container-fluid">
+    <form [formGroup]="compRegForm" (ngSubmit)="companyReg()">
+        <div class="compRegForm">
+            <div class="modal-header">
+                <h4 class="modal-title">Add Company Here</h4>
+            </div>
+            <div class="modal-body">
+                <div class="form-floating mb-3 mt-3 carNumberInp">
+                    <input type="text" class="form-control" id="companyName" placeholder="Company Name" formControlName="companyName" required>
+                    <label for="companyName">Company Name</label>
+                    <div *ngIf="compRegForm.controls['companyName'].invalid && (submitted || compRegForm.controls['companyName'].touched)" class="alert">
+                        Please enter company name
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-success regbtn">ADD</button>
+            </div>
+        </div>
+    </form>
+</div>

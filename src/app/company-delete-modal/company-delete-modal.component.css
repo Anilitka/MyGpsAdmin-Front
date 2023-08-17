@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+.container-fluid{
+    width: 40%;
+    margin: auto;
+}
+.header{
+    margin-bottom: 30px;
+    text-align: center;
+}
+.content{
+    text-align: center;
+    margin: auto;
+}
+
+.companyContent ul li {
+    display: flex;
+    justify-content: space-between;
+
+}
+.companyContent ul {
+    margin-bottom: 30px;
+}

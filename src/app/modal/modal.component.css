@@ -1,0 +1,65 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+.container-fluid{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+form{
+    width: 400px;
+    border: 1px solid white;
+    background-color: white;
+    border-radius: 7px;
+    padding: 50px;
+    text-align: center;
+}
+.regForm{
+    background-color: white;
+}
+.regForm h1{
+    font-family: 'Roboto Condensed', sans-serif;
+}
+.regbtn{
+    text-align: center;
+    padding: 10px 115px;
+    background-color: rgb(38, 122, 38);
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: bold;
+    margin-top: 30px;
+}
+.emailinp label{
+    color: rgb(99, 97, 97);
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: bold;
+}
+
+.passwordinp label{
+    color: rgb(99, 97, 97); 
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: bold;
+}
+.alert{
+    text-align: start;
+    margin: 0;
+    padding: 0;
+    color: rgb(205, 7, 7);
+    font-weight: bold;
+}
+
+input.ng-valid{
+    border: 2px solid rgb(87, 156, 87);
+}
+input.ng-invalid.ng-touched{
+    border: 1px solid rgb(205, 7, 7);
+}
+.roleformcontrol{
+    padding: 10px;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: bold;
+    color: rgb(99, 97, 97);
+}

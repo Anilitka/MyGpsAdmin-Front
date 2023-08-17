@@ -1,0 +1,87 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+
+
+<div class="sidebar">
+  <a routerLink="home" class="sidebar-brand">
+    <!-- <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg> -->
+    <span class="fs-4 logo">MYGPS Admin</span>
+  </a>
+  <hr>
+  <ul class="nav nav-pills flex-column mb-auto">
+
+    <li class="nav-item historyBtnItem">
+      <a class="nav-link text-white historybtn" routerLink="/history" aria-current="page" routerLinkActive="active" (click)="reloadCurrentPage()">
+        
+        History
+      </a>
+    </li>
+
+
+   <li class="nav-item regitem">
+    <div class="dropdown">
+      <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        Company Management
+       </a>
+    
+      <ul class="dropdown-menu ">
+        <li class="carReg">
+          <a class="nav-link text-white" aria-current="page" routerLinkActive="active" (click)="openModal()">
+  
+          Car Registration
+        </a>
+      </li>
+        <li class="carDel">
+          <a class="dropdown-item nav-link text-white " (click)="openDeleteModal()">Delete Car</a>
+        </li>
+        
+        <li class="companyReg">
+          <a class="dropdown-item nav-link text-white " (click)="openCompanyRegistration()"> Add Company </a>
+        </li>
+
+        <li class="deleteCompany">
+          <a class="dropdown-item nav-link text-white " (click)="openCompanyDelete()"> Delete Company </a>
+        </li>
+
+      </ul>
+    </div>
+  </li> 
+
+<!--    <li class="nav-item">-->
+<!--      <a class="nav-link text-white" routerLink="#" routerLinkActive="active">-->
+<!--        <svg class="bi me-2" width="16" height="16"><use xlink:href="#speedometer2"></use></svg>-->
+<!--        Car Number-->
+<!--      </a>-->
+<!--    </li>-->
+<!--    <li>-->
+<!--      <a class="nav-link text-white" routerLink="#" routerLinkActive="active">-->
+<!--        <svg class="bi me-2" width="16" height="16"><use xlink:href="#table"></use></svg>-->
+<!--        Liters-->
+<!--      </a>-->
+<!--    </li>-->
+<!--    <li>-->
+<!--      <a href="#" class="nav-link text-white" >-->
+<!--        <svg class="bi me-2" width="16" height="16"><use xlink:href="#grid"></use></svg>-->
+<!--        Fill Date/Time-->
+<!--      </a>-->
+<!--    </li>-->
+  </ul>
+
+  <button *ngIf="isAdmin" class="btn btn-primary mb-3" (click)="openNotification()">User Approval</button>
+
+
+
+  <hr>
+  <div class="dropdown">
+    <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+      <img src="./assets/imgs/man.png" alt="" width="32" height="32" class="rounded-circle me-2" style="background-color: darkgrey">
+      <strong >{{userName}}</strong>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1" >
+      <li><a *ngIf="isAdmin" class="dropdown-item" (click)="open()" style="cursor: pointer;">User registration</a></li>
+      <li><hr class="dropdown-divider"></li>
+      <li><a class="dropdown-item" href="#">Sign out</a></li>
+    </ul>
+  </div>
+</div>

@@ -66,7 +66,7 @@ carReg(){
 
     const headers = new HttpHeaders().set('Authorization', `Bearer ${this.tokenService.getToken()}`);
 
-    this.http.post('https://mygpsadminbe.mygps.ge:4436/api/UserCar/AddNewCar', carRegData, { headers } ).subscribe({
+    this.http.post('https://mygpsadminbe.mygps.ge:4436/api/CompanyCar/AddNewCar', carRegData, { headers } ).subscribe({
       next: (response) => {
         console.log('I am logging car reg response: ', response);
         this.carRegForm.reset(); 

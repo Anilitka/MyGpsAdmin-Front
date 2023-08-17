@@ -42,7 +42,7 @@ export class CompanyRegistrationComponent {
     const token = this.tokenService.getToken();
     const headers = new HttpHeaders().set('Authorization', `Bearer ${token}`);
 
-    this.http.post('https://mygpsadminbe.mygps.ge:4436/api/Company/AddNewCompany', companyRegData, { headers }).subscribe({
+    this.http.post('https://mygpsadminbe.mygps.ge:4436/api/CompanyManagmet/AddNewCompany', companyRegData, { headers }).subscribe({
       next: (response) => {
         console.log('Added company: ', response);
         this.compRegForm.reset();

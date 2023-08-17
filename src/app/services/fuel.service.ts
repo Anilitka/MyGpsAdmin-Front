@@ -21,7 +21,7 @@ export class FuelService {
 
 getCarListData(pageindex: number, pagesize: number) {
     const headers = this.getHeaders();
-    return this.http.get(`https://mygpsadminbe.mygps.ge:4436/api/WialonFuelHistory/GetAllFuelHistory?pageindex=${pageindex}&pagesize=${pagesize}` , { headers });
+    return this.http.get(`https://mygpsadminbe.mygps.ge:4436/api/Wialon/GetAllFuelHistory?Pageindex=${pageindex}&Pagesize=${pagesize}` , { headers });
 }
 
 getCarDataById(Id: string, page: number, startDate?: string, endDate?: string) {
@@ -38,32 +38,32 @@ getCarDataById(Id: string, page: number, startDate?: string, endDate?: string) {
 
 // getAllLitersById(Id: string){
 //   const headers = this.getHeaders();
-//   return this.http.get(`https://mygpsadminbe.mygps.ge:4436/api/WialonFuelHistory/GetLiterById?cardId=${Id}`, {headers})
+//   return this.http.get(`https://mygpsadminbe.mygps.ge:4436/api/Wialon/GetFuelLiterById?CardId=${Id}`, {headers})
 // }
 
 getRole(){
     const headers = this.getHeaders();
-    return this.http.get('https://mygpsadminbe.mygps.ge:4436/api/Roles/GetAllRoles', {headers})
+    return this.http.get('https://mygpsadminbe.mygps.ge:4436/api/Role/GetAllRoles', {headers})
 }
 
 
 getCount(): Observable<number>{
   const headers = this.getHeaders();
-  return this.http.get<number>('https://mygpsadminbe.mygps.ge:4436/api/WialonFuelHistory/GetAllCount', {headers})
+  return this.http.get<number>('https://mygpsadminbe.mygps.ge:4436/api/Wialon/GetAllCount', {headers})
 }
-
+// vkitxo
 getCountById(Id:string){
   const headers = this.getHeaders();
-  return this.http.get<number>(`https://mygpsadminbe.mygps.ge:4436/api/WialonFuelHistory/GetAllCount?cardId=${Id}`, {headers})
+  return this.http.get<number>(`https://mygpsadminbe.mygps.ge:4436/api/Wialon/GetAllCount?CardId=${Id}`, {headers})
 }
 
 getAllCars(): Observable<any>{
   const headers = this.getHeaders();
-  return this.http.get('https://mygpsadminbe.mygps.ge:4436/api/UserCar/GetAllCars', {headers})
+  return this.http.get('https://mygpsadminbe.mygps.ge:4436/api/CompanyCar/GetAllCars', {headers})
 }
 
  getCompanies(){
   const headers = this.getHeaders();
-  return this.http.get('https://mygpsadminbe.mygps.ge:4436/api/Company/GetAllCompanies', { headers });
+  return this.http.get('https://mygpsadminbe.mygps.ge:4436/api/CompanyManagmet/GetAllCompanies', { headers });
 }
 }

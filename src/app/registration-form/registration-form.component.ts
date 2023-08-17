@@ -69,11 +69,11 @@ register(){
       const regData = {
         userName: this.regForm.value.email,
         password: this.regForm.value.passwrd,
-        passwordConfirm: this.regForm.value.confPassword,
-        id: selectedRole.id, 
+        passwordConfirmation: this.regForm.value.confPassword,
+        roleId: selectedRole.id, 
       };
 
-      this.http.post<any>('https://mygpsadminbe.mygps.ge:4436/api/Authorization/UserRegistration', regData).subscribe({
+      this.http.post<any>('https://mygpsadminbe.mygps.ge:4436/api/Account/UserRegistration', regData).subscribe({
         next: (response) => {
           console.log('I am logging reg response: ', response);
           this.regForm.reset(); 

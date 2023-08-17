@@ -49,7 +49,7 @@ export class CompanyDeleteModalComponent {
       const headers = new HttpHeaders().set('Authorization', `Bearer ${token}`);
       id = this.chosenId
       console.log(id)
-      this.http.delete(`https://mygpsadminbe.mygps.ge:4436/api/Company/DeleteCompanyById?id=${id}`, { headers }).subscribe({
+      this.http.delete(`https://mygpsadminbe.mygps.ge:4436/api/CompanyManagmet/DeleteCompanyById=${id}`, { headers }).subscribe({
     next: (response) => {
       
       console.log('all data company', response);

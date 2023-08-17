@@ -53,7 +53,7 @@ export class LoginFormComponent {
 
       console.log(loginData);
 
-      this.http.post<any>('https://mygpsadminbe.mygps.ge:4436/api/Authorization/Login', loginData).subscribe({
+      this.http.post<any>('https://mygpsadminbe.mygps.ge:4436/api/Auth/Login', loginData).subscribe({
         next: (response) => {
           console.log(response);
 

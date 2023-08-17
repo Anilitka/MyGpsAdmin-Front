@@ -34,7 +34,7 @@ export class NotificationModalComponent {
       console.log(body.status);
 
     // Make the PATCH request
-    this.http.patch(`https://mygpsadminbe.mygps.ge:4436/api/Manager/UpdateByStatus?id=${user.id}`+'&status=true', body, { headers })
+    this.http.patch(`https://mygpsadminbe.mygps.ge:4436/api/Manager/UpdateUnnactiveAccounts?id=${user.id}`+'&status=true', body, { headers })
       .subscribe({
         next: (response: any) => {
           console.log('User approval successful:', response);
@@ -66,7 +66,7 @@ export class NotificationModalComponent {
       status: false }; // Replace with your desired boolean value or variable
 
     // Make the PATCH request
-    this.http.patch(`https://mygpsadminbe.mygps.ge:4436/api/Manager/UpdateByStatus?id=${user.id}`+'&status=false', body, { headers })
+    this.http.patch(`https://mygpsadminbe.mygps.ge:4436/api/Manager/UpdateUnnactiveAccounts?id=${user.id}`+'&status=false', body, { headers })
     
       .subscribe({
         

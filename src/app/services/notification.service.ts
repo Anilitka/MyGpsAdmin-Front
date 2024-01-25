@@ -15,7 +15,7 @@ openNotificationModal() {
   const token = this.tokenService.getToken();
     const headers = new HttpHeaders().set('Authorization', `Bearer ${token}`);
     const timestamp = new Date().getTime();
-    const url = `https://mygpsadminbe.mygps.ge:4436/api/Manager/GetFilteredUsers?timestamp=${timestamp}`;
+    const url = `https://`;
 
     this.http.get(url, { headers, responseType: "json" }).subscribe({
       next: (data: any) => {
